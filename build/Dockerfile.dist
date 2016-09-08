@@ -1,0 +1,7 @@
+FROM debian:jessie
+
+RUN mkdir /app
+ADD deploy-go-example /app/
+EXPOSE 18022
+ENTRYPOINT /app/deploy-go-example
+

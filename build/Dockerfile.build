@@ -1,0 +1,6 @@
+FROM golang:1.4
+
+RUN mkdir -p /tmp/build/{src,bin,pkg}
+WORKDIR /tmp/build
+go install github.com/ttacon/deploy-go-example/...
+CMD tar -czf - /tmp/build/bin/deploy-go-example
