@@ -1,3 +1,4 @@
 # !/bin/sh
-docker tag deploy-go-example:latest trey/deploy-go-example:production
-docker push trey/deploy-go-example:production
+ver=$(cat version)
+docker tag deploy-go-example:latest trey/deploy-go-example:$ver
+docker push trey/deploy-go-example:$ver
